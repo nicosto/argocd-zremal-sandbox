@@ -1,0 +1,83 @@
+argo-cd:
+  installCRDs: false
+  global:
+    image:
+      tag: v1.8.4
+  controller:
+    metrics:
+      enabled: true
+      serviceMonitor:
+        enabled: true
+        selector:
+          prometheus: kube-prometheus
+        namespace: monitoring
+      rules:
+        enabled: true
+        spec:
+        - alert: ArgoAppMissing
+          expr: |
+            absent(argocd_app_info)
+          for: 15m
+          labels:
+            severity: critical
+          annotations:
+            summary: "[ArgoCD] No reported applications"
+            description: >
+              ArgoCD has not reported any applications data for the past 15 minutes which
+              means that it must be down or not functioning properly.  This needs to be
+              resolved for this cloud to continue to maintain state.
+        - alert: ArgoAppNotSynced
+          expr: |
+            argocd_app_info{sync_status!="Synced"} == 1
+          for: 12h
+          labels:
+            severity: warning
+          annotations:
+            summary: "[{{`{{$labels.name}}`}}] Application not synchronized"
+            description: >
+              The application [{{`{{$labels.name}}`}} has not been synchronized for over
+              12 hours which means that the state of this cloud has drifted away from the
+              state inside Git.
+        selector:
+          prometheus: kube-prometheus
+        namespace: monitoring
+
+  repoServer:
+    metrics:
+      enabled: true
+      serviceMonitor:
+        enabled: true
+        selector:
+          prometheus: kube-prometheus
+        namespace: monitoring
+
+  dex:
+    enabled: false
+
+  server:
+    # extraArgs:
+    #   - --insecure
+    metrics:
+      enabled: true
+      serviceMonitor:
+        enabled: true
+        selector:
+          prometheus: kube-prometheus
+    ingress:
+      enabled: true
+      hosts:
+        - argocd.k3s.zremal.org
+    config:
+      repositories: |
+        - type: helm
+          name: stable
+          url: https://charts.helm.sh/stable
+        - type: helm
+          name: argo-cd
+          url: https://argoproj.github.io/argo-helm
+        - type: helm
+          name: prometheus-community
+          url: https://prometheus-community.github.io/helm-charts
+        - type: helm
+          name: jenkins
+          url: https://charts.jenkins.io                         

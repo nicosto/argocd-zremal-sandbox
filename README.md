@@ -12,7 +12,7 @@ helm dep update charts/argo-cd/
 ```
 
 ```
-helm install --namespace=argocd --create-namespace argocd charts/argo-cd/
+helm install --namespace=argocd --create-namespace argocd ./bootstrap
 ```
 
 ```
@@ -29,12 +29,13 @@ git add apps
 git ci -m 'add root app'
 git push
 
-helm template ./bootstrap/ | kubectl apply -f -
+helm template ./argocd | kubectl apply -f -
 ```
 
 ## references
 
 https://medium.com/@fache.loic/k3s-traefik-2-9b4646393a1c
 
+https://www.arthurkoziel.com/setting-up-argocd-with-helm/
 
 https://rtfm.co.ua/en/argocd-a-helm-chart-deployment-and-working-with-helm-secrets-via-aws-kms/#ArgCD_a_Helm_chart_deployment
