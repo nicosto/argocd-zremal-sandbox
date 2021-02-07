@@ -3,14 +3,14 @@ argo-cd:
   global:
     image:
       tag: v1.8.4
-  # controller:
-  #   metrics:
-  #     enabled: true
-  #     serviceMonitor:
-  #       enabled: true
-  #       selector:
-  #         prometheus: kube-prometheus
-  #       namespace: monitoring
+  controller:
+    metrics:
+      enabled: true
+      serviceMonitor:
+        enabled: true
+        selector:
+          release: prometheus
+        # namespace: monitoring
   #     rules:
   #       enabled: true
   #       spec:
@@ -42,14 +42,14 @@ argo-cd:
   #         prometheus: kube-prometheus
   #       namespace: monitoring
 
-  # repoServer:
-  #   metrics:
-  #     enabled: true
-  #     serviceMonitor:
-  #       enabled: true
-  #       selector:
-  #         prometheus: kube-prometheus
-  #       namespace: monitoring
+  repoServer:
+    metrics:
+      enabled: true
+      serviceMonitor:
+        enabled: true
+        selector:
+          release: prometheus
+        # namespace: monitoring
 
   dex:
     enabled: false
@@ -62,7 +62,7 @@ argo-cd:
       serviceMonitor:
         enabled: true
         selector:
-          prometheus: kube-prometheus
+          release: prometheus
     ingress:
       enabled: true
       hosts:
