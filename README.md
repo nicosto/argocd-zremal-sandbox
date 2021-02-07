@@ -22,14 +22,15 @@ kubectl -n argocd port-forward svc/argo-cd-argocd-server 9080:443
 ```
 kubectl -n argocd get pods -l app.kubernetes.io/name=argocd-server -o name | cut -d'/' -f 2
 ```
-## install auto-update 
+## install inital jobs
+This will install the root job and the Argo CD slef update jobs
 
 ```
 git add apps
 git ci -m 'add root app'
 git push
 
-helm template ./argocd | kubectl apply -f -
+helm template ./jobs-bootstrap | kubectl apply -f -
 ```
 
 ## references
