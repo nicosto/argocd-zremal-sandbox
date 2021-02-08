@@ -10,7 +10,6 @@ argo-cd:
         enabled: true
         selector:
           release: prometheus
-        # namespace: monitoring
   #     rules:
   #       enabled: true
   #       spec:
@@ -49,7 +48,6 @@ argo-cd:
         enabled: true
         selector:
           release: prometheus
-        # namespace: monitoring
 
   dex:
     enabled: false
