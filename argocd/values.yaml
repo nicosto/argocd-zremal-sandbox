@@ -1,4 +1,4 @@
-argocd:
+argo-cd:
   installCRDs: false
   global:
     image:
@@ -10,7 +10,6 @@ argocd:
         enabled: true
         selector:
           release: prometheus
-        # namespace: monitoring
   #     rules:
   #       enabled: true
   #       spec:
@@ -49,7 +48,6 @@ argocd:
         enabled: true
         selector:
           release: prometheus
-        # namespace: monitoring
 
   dex:
     enabled: false
