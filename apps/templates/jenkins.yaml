@@ -29,7 +29,6 @@ spec:
             enabled: true
             serviceMonitorAdditionalLabels:
               release: prometheus
-
     repoURL: https://charts.jenkins.io
     targetRevision: 3.1.8
   syncPolicy:
