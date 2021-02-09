@@ -53,8 +53,8 @@ argo-cd:
     enabled: false
 
   server:
-    # extraArgs:
-    #   - --insecure
+    extraArgs:
+      - --insecure
     metrics:
       enabled: true
       serviceMonitor:
