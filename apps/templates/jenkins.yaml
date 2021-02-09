@@ -19,7 +19,7 @@ spec:
             - prometheus:2.0.8
             - credentials:2.3.14
             - plain-credentials:1.7
-            - dependency-track:3.0.2
+            - dependency-track:3.1.0
             - pipeline-utility-steps:2.6.1
             # - gitea:1.2.1    # jenkins is crashing when enabled 
           ingress:
