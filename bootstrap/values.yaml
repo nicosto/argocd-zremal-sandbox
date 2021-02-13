@@ -12,3 +12,6 @@ argo-cd:
       enabled: true
       hosts:
         - argocd.k3s.zremal.org
+  configs:
+    secret:
+      argocdServerAdminPassword: $2a$10$c68/1zKyCGVS.gPwtWTuBOUZ2hBGPXL.UHHTRPMuk9BseCwmScuua

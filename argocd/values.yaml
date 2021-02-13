@@ -78,4 +78,8 @@ argo-cd:
           url: https://prometheus-community.github.io/helm-charts
         - type: helm
           name: jenkins
-          url: https://charts.jenkins.io                         
+          url: https://charts.jenkins.io
+
+  configs:
+    secret:
+      argocdServerAdminPassword: $2a$10$c68/1zKyCGVS.gPwtWTuBOUZ2hBGPXL.UHHTRPMuk9BseCwmScuua
