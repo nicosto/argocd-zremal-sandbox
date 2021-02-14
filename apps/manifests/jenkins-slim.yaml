@@ -4,19 +4,6 @@ metadata:
   name: slim
 spec:
   master:
-    basePlugins:
-    # - name: kubernetes
-    #   version: 1.18.3
-    # - name: workflow-job
-    #   version: "2.34"
-    # - name: workflow-aggregator
-    #   version: "2.6"
-    # - name: git
-    #   version: 3.12.0
-    # - name: job-dsl
-    #   version: "1.76"
-      - name: configuration-as-code
-        version: "1.47"
     image: jenkins/jenkins:lts
   seedJobs:
   - id: jenkins-operator
