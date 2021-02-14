@@ -6,19 +6,6 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  basePlugins:
-    # - name: kubernetes
-    #   version: 1.18.3
-    # - name: workflow-job
-    #   version: "2.34"
-    # - name: workflow-aggregator
-    #   version: "2.6"
-    # - name: git
-    #   version: 3.12.0
-    # - name: job-dsl
-    #   version: "1.76"
-    - name: configuration-as-code
-      version: "1.47"
   destination:
     server: https://kubernetes.default.svc
     namespace: jenkins-operator
@@ -27,6 +14,26 @@ spec:
     chart: jenkins-operator
     repoURL: https://raw.githubusercontent.com/jenkinsci/kubernetes-operator/master/chart
     targetRevision: 0.4.2
+    helm:
+      values: |
+        jenkins:
+          basePlugins:
+            # - name: kubernetes
+            #   version: "1.25.2"
+            # - name: workflow-job
+            #   version: "2.39"
+            # - name: workflow-aggregator
+            #   version: "2.6"
+            # - name: git
+            #   version: "4.2.2"
+            # - name: job-dsl
+            #   version: "1.77"
+            - name: configuration-as-code
+              version: "1.47"
+            # - name: kubernetes-credentials-provider
+            #   version: "0.13"
+
+
   syncPolicy:
     automated:
       prune: true
