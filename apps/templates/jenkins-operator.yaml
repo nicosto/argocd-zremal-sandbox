@@ -20,7 +20,7 @@ spec:
           namespace: jenkins-operator
           image: jenkins/jenkins:2.263.4-lts-alpine
         #   imagePullPolicy: Always
-          # basePlugins:
+          basePlugins:
         #     - name: kubernetes
         #       version: "1.28.6"
         #     - name: workflow-job
