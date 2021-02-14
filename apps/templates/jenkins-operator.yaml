@@ -18,7 +18,7 @@ spec:
       values: |
         jenkins:
           namespace: jenkins-operator
-        #   image: jenkins/jenkins:2.263.4-lts-alpine
+          image: jenkins/jenkins:2.263.4-lts-alpine
         #   imagePullPolicy: Always
           basePlugins:
         #     - name: kubernetes
