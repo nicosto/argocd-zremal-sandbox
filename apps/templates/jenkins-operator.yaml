@@ -6,30 +6,26 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
+  master:
+    # basePlugins:
+    # - name: kubernetes
+    #   version: 1.18.3
+    # - name: workflow-job
+    #   version: "2.34"
+    # - name: workflow-aggregator
+    #   version: "2.6"
+    # - name: git
+    #   version: 3.12.0
+    # - name: job-dsl
+    #   version: "1.76"
+    - name: configuration-as-code
+      version: "1.47"
   destination:
     server: https://kubernetes.default.svc
     namespace: jenkins-operator
   project: default
   source:
     chart: jenkins-operator
-    # helm:
-    #   values: |
-    #     controller:
-    #       additionalPlugins:
-    #         - prometheus:2.0.8
-    #         - credentials:2.3.15
-    #         - plain-credentials:1.7
-    #         - dependency-track:3.1.0
-    #         - pipeline-utility-steps:2.6.1
-    #         # - gitea:1.2.1    # jenkins is crashing when enabled 
-    #       ingress:
-    #         enabled: true
-    #         hostName: jenkins.k3s.zremal.org
-    #       prometheus:
-    #         enabled: true
-    #         serviceMonitorAdditionalLabels:
-    #           release: prometheus
-    #       adminPassword: admin
     repoURL: https://raw.githubusercontent.com/jenkinsci/kubernetes-operator/master/chart
     targetRevision: 0.4.2
   syncPolicy:
