@@ -34,8 +34,36 @@ spec:
               version: "1.47"
             - name: kubernetes-credentials-provider
               version: "0.16"
+
+          plugins:
+            - name: prometheus
+              version: "2.0.8"
+            - name: credentials
+              version: "2.3.15"
+            - name: plain-credentials
+              version: "1.7"
+            - name: dependency-track
+              version: "3.1.0"
+            - name: pipeline-utility-steps
+              version: "2.6.1"
+
           backup:
             enabled: false
+
+
+
+  # seedJobs is placeholder for jenkins seed jobs
+  # For seed job creation tutorial, check https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/latest/configuration/#prepare-job-definitions-and-pipelines
+  # See https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/latest/configuration/#configure-seed-jobs for additional info
+  # Example:
+  #
+  # seedJobs:
+  #  - id: jenkins-operator
+  #    targets: "cicd/jobs/*.jenkins"
+  #    description: "Jenkins Operator repository"
+  #    repositoryBranch: master
+  #    repositoryUrl: https://github.com/jenkinsci/kubernetes-operator.git
+  seedJobs: []
 
 
   syncPolicy:
