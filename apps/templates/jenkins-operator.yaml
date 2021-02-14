@@ -18,9 +18,9 @@ spec:
       values: |
         jenkins:
           namespace: jenkins-operator
-          image: jenkins/jenkins:2.263.4-lts-alpine
+          # image: jenkins/jenkins:2.263.4-lts-alpine
         #   imagePullPolicy: Always
-          basePlugins:
+          # basePlugins:
         #     - name: kubernetes
         #       version: "1.28.6"
         #     - name: workflow-job
@@ -31,8 +31,8 @@ spec:
         #       version: "4.5.0"
         #     - name: job-dsl
         #       version: "1.77"
-            - name: configuration-as-code
-              version: "1.47"
+            # - name: configuration-as-code
+            #   version: "1.47"
         #     - name: kubernetes-credentials-provider
         #       version: "0.15"
         #   plugins: []
