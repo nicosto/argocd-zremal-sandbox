@@ -16,8 +16,8 @@ spec:
     targetRevision: 0.4.2
     helm:
       values: |
-        # jenkins:
-        #   namespace: jenkins-operator
+        jenkins:
+          namespace: jenkins-operator
         #   image: jenkins/jenkins:2.263.4-lts-alpine
         #   imagePullPolicy: Always
         #   basePlugins:
