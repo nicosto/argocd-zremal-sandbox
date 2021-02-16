@@ -51,7 +51,7 @@ spec:
             - id: jenkins-operator
               targets: "jobs/*.jenkins"
               description: "Jenkins Operator repository"
-              repositoryBranch: master
+              repositoryBranch: main
               repositoryUrl: 
                 - https://github.com/nicosto/jenkins-seed.git
 
