@@ -4,9 +4,9 @@ metadata:
   name: zremal
 spec:
   master:
-    namespace: jenkins
     containers:
     - name: jenkins-master
+      namespace: jenkins
       imagePullPolicy: Always
       image: jenkins/jenkins:2.263.4-lts-alpine
       basePlugins:
