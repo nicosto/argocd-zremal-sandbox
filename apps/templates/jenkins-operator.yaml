@@ -55,8 +55,8 @@ spec:
               repositoryBranch: main
               repositoryUrl: https://github.com/nicosto/jenkins-seed.git
 
-          backup:
-            enabled: false
+          # backup:
+          #   enabled: false
 
   syncPolicy:
     automated:
