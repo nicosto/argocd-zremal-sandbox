@@ -2,7 +2,6 @@ apiVersion: jenkins.io/v1alpha2
 kind: Jenkins
 metadata:
   name: zremal
-  namespace: jenkins
 spec:
   master:
     basePlugins:
