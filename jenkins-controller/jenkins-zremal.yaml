@@ -4,6 +4,7 @@ metadata:
   name: zremal
 spec:
   master:
+    namespace: jenkins
     containers:
     - name: jenkins-master
       imagePullPolicy: Always
@@ -36,6 +37,7 @@ spec:
           version: "2.6.1"
       backup:
         enabled: false
+
 
   seedJobs:
     - id: jenkins-operator
