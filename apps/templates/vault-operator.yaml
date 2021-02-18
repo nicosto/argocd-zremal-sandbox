@@ -1,19 +1,21 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: vault
+  name: vault-operator
   namespace: argocd
   finalizers:
-  - resources-finalizer.argocd.argoproj.io
+    - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
+    server: https://kubernetes.default.svc
     namespace: vault
-    server: {{ .Values.spec.destination.server }}
   project: default
   source:
-    path: vault-operated
-    repoURL: {{ .Values.spec.source.repoURL }}
-    targetRevision: {{ .Values.spec.source.targetRevision }}
+    chart: vault-operator
+    # helm:
+    #   values: |
+    repoURL: https://kubernetes-charts.banzaicloud.com
+    targetRevision: 1.11.3
   syncPolicy:
     automated:
       prune: true
