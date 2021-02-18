@@ -17,8 +17,7 @@ spec:
     helm:
       values: |
         jenkins:
-          # enabled: false
-          # namespace: jenkins-operator
+          namespace: jenkins
           image: jenkins/jenkins:2.263.4-lts-alpine
           basePlugins:
             - name: kubernetes
@@ -55,8 +54,8 @@ spec:
               repositoryBranch: main
               repositoryUrl: https://github.com/nicosto/jenkins-seed.git
 
-          # backup:
-          #   enabled: false
+          backup:
+            enabled: false
 
   syncPolicy:
     automated:
