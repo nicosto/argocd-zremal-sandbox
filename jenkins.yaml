@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: jenkins
+  name: jenkins-controller-dedicated-instances
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
