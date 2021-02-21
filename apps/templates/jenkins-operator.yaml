@@ -55,6 +55,13 @@ spec:
               repositoryUrl: https://github.com/nicosto/jenkins-seed.git
 
           configurationAsCode:
+            jenkins:
+              systemMessage: |
+                Welcome to this build server.
+
+                This Jenkins is 100% configured and managed 'as code'.
+                Config is now mostly handled by the 'Jenkins Configuration as Code' (JCasC) plugin.
+
             unclassified:
               location:
                 url: http://jenkins.k3s.zremal.org:8080/
@@ -69,7 +76,6 @@ spec:
                         id: slack-token
                         secret: "${SLACK_TOKEN}"
                         description: Slack token
-
 
           backup:
             enabled: false
