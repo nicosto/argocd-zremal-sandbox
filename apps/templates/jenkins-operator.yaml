@@ -63,6 +63,8 @@ spec:
                 Config is now mostly handled by the 'Jenkins Configuration as Code' (JCasC) plugin.
 
             unclassified:
+              resourceRoot:
+                url: "http://jenkins.k3s.zremal.org:8080/"
               location:
                 url: http://jenkins.k3s.zremal.org:8080/
                 jenkinsAdminEmail: cicd@zremal.org
