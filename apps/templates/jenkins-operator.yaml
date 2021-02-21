@@ -54,6 +54,11 @@ spec:
               repositoryBranch: main
               repositoryUrl: https://github.com/nicosto/jenkins-seed.git
 
+          configurationAsCode:
+            unclassified:
+              location:
+                url: http://jenkins.k3s.zremal.org:8080/
+
           backup:
             enabled: false
 
