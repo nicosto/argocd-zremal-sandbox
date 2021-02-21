@@ -58,6 +58,18 @@ spec:
             unclassified:
               location:
                 url: http://jenkins.k3s.zremal.org:8080/
+                jenkinsAdminEmail: cicd@zremal.org
+
+          credentials:
+            system:
+              domainCredentials:
+                - credentials:
+                    - string:
+                        scope: GLOBAL
+                        id: slack-token
+                        secret: "${SLACK_TOKEN}"
+                        description: Slack token
+
 
           backup:
             enabled: false
