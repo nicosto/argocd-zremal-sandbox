@@ -60,22 +60,6 @@ spec:
               - name: jenkins-operator-user-configuration
 
 
-# jenkins-operator-user-configuration
-
-          # configurationAsCode:
-          #   jenkins:
-          #     systemMessage: |
-          #       Welcome to this build server.
-
-          #       This Jenkins is 100% configured and managed 'as code'.
-          #       Config is now mostly handled by the 'Jenkins Configuration as Code' (JCasC) plugin.
-
-            unclassified:
-              resourceRoot:
-                url: "http://jenkins.k3s.zremal.org:8080/"
-              location:
-                url: http://jenkins.test.zremal.org:8080/
-                jenkinsAdminEmail: cicd@zremal.org
 
           backup:
             enabled: false
