@@ -66,7 +66,7 @@ spec:
               resourceRoot:
                 url: "http://jenkins.k3s.zremal.org:8080/"
               location:
-                url: http://jenkins.k3s.zremal.org:8080/
+                url: http://jenkins.test.zremal.org:8080/
                 jenkinsAdminEmail: cicd@zremal.org
 
           backup:
