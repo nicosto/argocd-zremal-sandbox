@@ -54,13 +54,26 @@ spec:
               repositoryBranch: main
               repositoryUrl: https://github.com/nicosto/jenkins-seed.git
 
-          configurationAsCode:
-            jenkins:
-              systemMessage: |
-                Welcome to this build server.
+          configuration:
+            configurationAsCode:
+              - configMapName: jenkins-casc
+                content:
+                  jenkins:
+                    systemMessage: |
+                      Welcome to this build server.
 
-                This Jenkins is 100% configured and managed 'as code'.
-                Config is now mostly handled by the 'Jenkins Configuration as Code' (JCasC) plugin.
+                      This Jenkins is 100% configured and managed 'as code'.
+                      Config is now mostly handled by the 'Jenkins Configuration as Code' (JCasC) plugin.                  
+
+
+
+          # configurationAsCode:
+          #   jenkins:
+          #     systemMessage: |
+          #       Welcome to this build server.
+
+          #       This Jenkins is 100% configured and managed 'as code'.
+          #       Config is now mostly handled by the 'Jenkins Configuration as Code' (JCasC) plugin.
 
             unclassified:
               resourceRoot:
