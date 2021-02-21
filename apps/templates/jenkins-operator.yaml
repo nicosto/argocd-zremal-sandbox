@@ -54,12 +54,6 @@ spec:
               repositoryBranch: main
               repositoryUrl: https://github.com/nicosto/jenkins-seed.git
 
-          configuration:
-            configurationAsCode:
-              configurations: 
-              - name: jenkins-operator-user-configuration
-
-
 
           backup:
             enabled: false

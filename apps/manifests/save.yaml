@@ -1,3 +1,9 @@
+          configuration:
+            configurationAsCode:
+              configurations: 
+              - name: jenkins-operator-user-configuration
+
+
 
 # jenkins-operator-user-configuration
 
