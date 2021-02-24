@@ -66,6 +66,7 @@ argo-cd:
       hosts:
         - argocd.k3s.zremal.org
     config:
+      kustomize.buildOptions: --load_restrictor none
       repositories: |
         - type: helm
           name: stable
