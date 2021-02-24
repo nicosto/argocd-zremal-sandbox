@@ -11,7 +11,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: /
+    # path: /
     repoURL: https://github.com/nicosto/kustomize-grafana-dashboards
     targetRevision: master
   syncPolicy:
