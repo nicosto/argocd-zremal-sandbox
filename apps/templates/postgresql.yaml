@@ -12,6 +12,9 @@ spec:
   project: default
   source:
     chart: postgresql
+    helm:
+      values: |
+        aaa: bbb
     repoURL: https://charts.bitnami.com/bitnami
     targetRevision: 10.3.6
   syncPolicy:
