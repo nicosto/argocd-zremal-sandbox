@@ -63,7 +63,9 @@ spec:
               memory: 500Mi
 
           backup:
-            enabled: false
+            pvc:
+              className: "local-path"
+
 
   syncPolicy:
     automated:
