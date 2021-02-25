@@ -12,8 +12,31 @@ spec:
   project: default
   source:
     chart: postgresql
-    # helm:
-    #   values: |
+    helm:
+      values: |
+        metrics:
+          enabled: true
+          serviceMonitor:
+            enabled: true
+            additionalLabels:
+              release: prometheus-grafana
+          prometheusRule:
+            enabled: false
+            additionalLabels: {}
+            ## These are just examples rules, please adapt them to your needs.
+            ## Make sure to constraint the rules to the current postgresql service.
+            ## rules:
+            ##   - alert: HugeReplicationLag
+            ##     expr: pg_replication_lag{service="{{ template "common.names.fullname" . }}-metrics"} / 3600 > 1
+            ##     for: 1m
+            ##     labels:
+            ##       severity: critical
+            ##     annotations:
+            ##       description: replication for {{ template "common.names.fullname" . }} PostgreSQL is lagging by {{ "{{ $value }}" }} hour(s).
+            ##       summary: PostgreSQL replication is lagging by {{ "{{ $value }}" }} hour(s).
+            ##
+            rules: []
+
     repoURL: https://charts.bitnami.com/bitnami
     targetRevision: 10.3.6
   syncPolicy:
