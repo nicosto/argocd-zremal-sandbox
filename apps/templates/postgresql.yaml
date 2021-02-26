@@ -14,12 +14,13 @@ spec:
     chart: postgresql
     helm:
       values: |
+        postgresqlDatabase: metrics
         metrics:
           enabled: true
-    #       serviceMonitor:
-    #         enabled: true
-    #         additionalLabels:
-    #           release: prometheus-grafana
+          serviceMonitor:
+            enabled: true
+            additionalLabels:
+              release: prometheus-grafana
     #       prometheusRule:
     #         enabled: false
     #         additionalLabels: {}
