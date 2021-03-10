@@ -49,3 +49,8 @@ https://kurtmadel.com/posts/native-kubernetes-continuous-delivery/building-conta
 https://github.com/external-secrets/kubernetes-external-secrets
 https://yetiops.net/posts/argocd-jenkins-pipeline/
 https://github.com/jenkinsci/configuration-as-code-plugin
+
+
+## Dependency-track
+
+helmchart: https://github.com/evryfs/helm-charts/tree/master/charts/dependency-track
