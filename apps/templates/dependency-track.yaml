@@ -12,15 +12,11 @@ spec:
   project: default
   source:
     chart: dependency-track
-    # helm:
-    #   values: |
-    #     postgresqlDatabase: metrics
-    #     metrics:
-    #       enabled: true
-    #       serviceMonitor:
-    #         enabled: true
-    #         additionalLabels:
-    #           release: prometheus-grafana
+    helm:
+      values: |
+        ingress:
+          enabled: true
+          host: dt.k3s.zremal.org
     repoURL: https://evryfs.github.io/helm-charts/
     targetRevision: 0.2.4
   syncPolicy:
