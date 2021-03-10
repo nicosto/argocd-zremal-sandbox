@@ -16,7 +16,10 @@ spec:
       values: |
         ingress:
           enabled: true
-          host: dt.k3s.zremal.org
+          hosts:
+            - host: dt.k3s.zremal.org
+              paths:
+                - "/"
     repoURL: https://evryfs.github.io/helm-charts/
     targetRevision: 0.2.4
   syncPolicy:
