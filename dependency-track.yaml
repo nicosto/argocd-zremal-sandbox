@@ -12,14 +12,14 @@ spec:
   project: default
   source:
     chart: dependency-track
-    helm:
-      values: |
-        ingress:
-          enabled: true
-          hosts:
-            - host: dtrack.k3s.zremal.org
-              paths:
-                - "/"
+    # helm:
+    #   values: |
+    #     ingress:
+    #       enabled: true
+    #       hosts:
+    #         - host: dtrack.k3s.zremal.org
+    #           paths:
+    #             - "/"
     repoURL: https://evryfs.github.io/helm-charts/
     targetRevision: 1.0.2
   syncPolicy:
