@@ -29,9 +29,9 @@ spec:
               value: "deptrack"
             - name: ALPINE_DATABASE_PASSWORD
               value: "deptrack"
-        ingress:
-          enabled: true
-          host: dt.k3s.zremal.org
+        # ingress:
+        #   enabled: true
+        #   host: dt.k3s.zremal.org
         postgresql:
           enabled: false
     repoURL: https://evryfs.github.io/helm-charts/
