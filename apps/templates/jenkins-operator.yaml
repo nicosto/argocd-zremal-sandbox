@@ -11,8 +11,8 @@ spec:
     namespace: jenkins-operator
   project: default
   source:
-    chart: jenkins-operator
     repoURL: https://raw.githubusercontent.com/jenkinsci/kubernetes-operator/master/chart
+    chart: jenkins-operator
     targetRevision: 0.4.3
     helm:
       values: |
