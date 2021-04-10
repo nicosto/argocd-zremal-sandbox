@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dependency-track
+  namespace: dependency-track
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: dependency-track
+  project: default
+  source:
+    chart: dependency-track
+    helm:
+      values: |
+        ingress:
+          enabled: true
+          host: dt.k3s.zremal.org
+    repoURL: https://evryfs.github.io/helm-charts
+    targetRevision: 1.0.4
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
