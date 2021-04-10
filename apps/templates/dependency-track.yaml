@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: dependency-track
-  namespace: dependency-track
+  namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
