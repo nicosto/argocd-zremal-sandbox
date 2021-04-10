@@ -27,7 +27,7 @@ spec:
             - name: workflow-aggregator
               version: "2.6"
             - name: git
-              version: "4.7.1"
+              version: "4.6.1"
             - name: job-dsl
               version: "1.77"
             - name: configuration-as-code
@@ -46,8 +46,6 @@ spec:
               version: "3.1.1"
             - name: pipeline-utility-steps
               version: "2.7.1"
-            - name: git-client-plugin
-              version: "3.7.1"
 
           seedJobs:
             - id: jenkins-operator
