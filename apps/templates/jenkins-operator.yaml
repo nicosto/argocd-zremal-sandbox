@@ -13,7 +13,6 @@ spec:
   source:
     chart: jenkins-operator
     repoURL: https://raw.githubusercontent.com/jenkinsci/kubernetes-operator/master/chart
-             https://raw.githubusercontent.com/jenkinsci/kubernetes-operator/master/chart
     targetRevision: 0.4.3
     helm:
       values: |
