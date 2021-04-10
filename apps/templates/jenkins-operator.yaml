@@ -46,6 +46,8 @@ spec:
               version: "3.1.1"
             - name: pipeline-utility-steps
               version: "2.7.1"
+            - name: git-client-plugin
+              version: "3.7.1"
 
           seedJobs:
             - id: jenkins-operator
