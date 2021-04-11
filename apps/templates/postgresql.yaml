@@ -9,7 +9,6 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: postgresql
-  project: default
   source:
     chart: postgresql
     helm:

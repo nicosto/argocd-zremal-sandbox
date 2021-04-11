@@ -9,7 +9,6 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
-  project: default
   source:
     chart: kube-prometheus-stack
     helm:

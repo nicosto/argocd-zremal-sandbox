@@ -9,7 +9,6 @@ spec:
   destination:
     namespace: monitoring
     server: https://kubernetes.default.svc
-  project: default
   source:
     path: dashboards
     repoURL: https://github.com/nicosto/kustomize-grafana-dashboards
