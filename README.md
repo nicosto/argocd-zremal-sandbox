@@ -22,7 +22,7 @@ kubectl -n argocd port-forward svc/argo-cd-argocd-server 9080:443
 Get admin password
 
 ```
-kubectl -n argocd get pods -l app.kubernetes.io/name=argocd-server -o name | cut -d'/' -f 2
+$ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d && echo
 ```
 ## install inital jobs
 This will install the root job and the Argo CD self update job

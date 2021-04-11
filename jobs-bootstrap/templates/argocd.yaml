@@ -13,7 +13,7 @@ spec:
   source:
     path: argocd
     repoURL: https://github.com/nicosto/zremal-argocd.git
-    targetRevision: release/argocd
+    # targetRevision: release/argocd
   syncPolicy:
     automated:
       prune: true
