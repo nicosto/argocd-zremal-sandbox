@@ -17,6 +17,8 @@ spec:
     helm:
       values: |
         jenkins:
+          service:
+            type: LoadBalancer
           namespace: jenkins-operator
           # image: nicosto75/jenkins:2.263.4-1
           basePlugins:
