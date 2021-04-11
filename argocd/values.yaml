@@ -1,8 +1,5 @@
 argo-cd:
-  installCRDs: false
-  global:
-    image:
-      tag: v2.0.0
+  # installCRDs: false
   controller:
     metrics:
       enabled: true
@@ -83,4 +80,4 @@ argo-cd:
 
   configs:
     secret:
-      argocdServerAdminPassword: $2a$10$c68/1zKyCGVS.gPwtWTuBOUZ2hBGPXL.UHHTRPMuk9BseCwmScuua
+      argocdServerAdminPassword: $2a$10$wZWDfqeihKa5oC.7CkdpC.XRbNslO4PpXJ9gRakn4pckJi5rF8P3K

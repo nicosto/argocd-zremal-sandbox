@@ -6,12 +6,12 @@ argo-cd:
   dex:
     enabled: false
   server:
-    # extraArgs:
-    #   - --insecure
+    extraArgs:
+      - --insecure
     ingress:
       enabled: true
       hosts:
         - argocd.k3s.zremal.org
   configs:
     secret:
-      argocdServerAdminPassword: $2a$10$c68/1zKyCGVS.gPwtWTuBOUZ2hBGPXL.UHHTRPMuk9BseCwmScuua
+      argocdServerAdminPassword: $2a$10$wZWDfqeihKa5oC.7CkdpC.XRbNslO4PpXJ9gRakn4pckJi5rF8P3K

@@ -8,22 +8,25 @@ helm repo add argo-cd https://argoproj.github.io/argo-helm
 ```
 
 ```
-helm dep update charts/argo-cd/
+helm dep update ./bootstrap
 ```
 
 ```
-helm install --namespace=argocd --create-namespace argocd ./bootstrap
+helm install --namespace=argocd --create-namespace argocd ./bootstrap 
 ```
 
 ```
 kubectl -n argocd port-forward svc/argo-cd-argocd-server 9080:443
 ```
 
+Get admin password
+
 ```
 kubectl -n argocd get pods -l app.kubernetes.io/name=argocd-server -o name | cut -d'/' -f 2
 ```
 ## install inital jobs
 This will install the root job and the Argo CD self update job
+
 
 ```
 git add apps
