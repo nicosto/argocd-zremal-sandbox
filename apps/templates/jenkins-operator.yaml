@@ -9,6 +9,7 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: jenkins-operator
+  project: default
   source:
     repoURL: https://raw.githubusercontent.com/jenkinsci/kubernetes-operator/master/chart
     chart: jenkins-operator

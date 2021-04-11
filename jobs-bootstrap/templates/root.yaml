@@ -9,6 +9,7 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
+  project: default
   source:
     path: apps/
     repoURL: https://github.com/nicosto/zremal-argocd.git

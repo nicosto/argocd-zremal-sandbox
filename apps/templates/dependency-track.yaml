@@ -9,6 +9,7 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: dependency-track
+  project: default
   source:
     repoURL: https://evryfs.github.io/helm-charts
     chart: dependency-track
