@@ -13,7 +13,7 @@ spec:
   source:
     repoURL: https://evryfs.github.io/helm-charts
     chart: dependency-track
-    targetRevision: 1.0.4
+    targetRevision: 1.0.5
     helm:
       values: |
         ingress:

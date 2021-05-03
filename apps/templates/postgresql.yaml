@@ -23,7 +23,7 @@ spec:
             additionalLabels:
               release: prometheus-grafana
     repoURL: https://charts.bitnami.com/bitnami
-    targetRevision: 10.3.16
+    targetRevision: 10.4.1
   syncPolicy:
     automated:
       prune: true
