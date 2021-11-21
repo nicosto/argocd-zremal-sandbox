@@ -12,8 +12,8 @@ spec:
   project: default
   source:
     path: argocd
-    repoURL: https://scm.zremal.org/Nicolas/argocd-zremal-production.git
-    # targetRevision: release/argocd
+    repoURL: https://github.com/nicosto/argocd_argocd.git
+    targetRevision: master
   syncPolicy:
     automated:
       prune: true
